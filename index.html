@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="https://cdn.glitch.com/9c614cc7-3ede-4741-a5ec-749e59f7d477%2Fimage.png?v=1612338724119">
+        <title>Test PWA</title>
+    </head>
+    <body>
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("/serviceWorker.js")
+                        .then(res => console.log("service worker registered"))
+                        .catch(err => console.log("service worker not registered", err))
+                })
+            }
+        </script>
+        <script src="a.js"></script>
+        <script>
+            var screen = [
+                QUI.card({ id: "c1" }, [
+                    QUI.button({ id: "bbb", text: "hello", shape: "round" })
+                ])
+            ]
+
+            AddElements(screen);
+          
+          window.addEventListener('beforeinstallprompt', (e) => {
+          // Prevent the mini-infobar from appearing on mobile
+          e.preventDefault();
+          // Stash the event so it can be triggered later.
+          deferredPrompt = e;
+          // Update UI notify the user they can install the PWA
+          //showInstallPromotion();
+          
+        });
+          
+          document.getElementById("bbb").onclick  = function(){
+            deferredPrompt.prompt();
+          };
+        </script>
+      <span>sads</span>
+    </body>
+</html>

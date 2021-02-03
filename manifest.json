@@ -1,0 +1,17 @@
+{
+  "short_name": "SHIKTO APP",
+  "name": "SHIKTO APP <br /> My first PWA",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.com/9c614cc7-3ede-4741-a5ec-749e59f7d477%2Fimage.png?v=1612338724119",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "description": "Weather forecast information"
+}
