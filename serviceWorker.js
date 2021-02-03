@@ -5,7 +5,7 @@ self.addEventListener("install", e => {
             return cache.addAll([
                 "./",
                 "./a.js",
-                "./manifest.json",
+                "https://raw.githubusercontent.com/shikto-tech/pwa_1_ccc/main/manifest.json",
                 "./index.html",
                 "https://cdn.glitch.com/9c614cc7-3ede-4741-a5ec-749e59f7d477%2Fimage.png?v=1612338724119"
             ]);
